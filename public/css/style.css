@@ -1,0 +1,513 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 130%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+    background-color: #f3f3f3;
+    min-height:100vh;
+    padding-bottom: 20px;
+    
+}
+.hidden{
+  display: none !important;
+}
+.navbar-container{
+  padding-top: 0.5rem;
+  background-color:#f3f3f3 ;
+  box-shadow:inset 5px 10px 20px rgba(0, 0, 0, .1);
+  margin-bottom: 1rem;
+}
+.navbar{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar h4{
+  font-weight: 600;
+}
+.navbar h6{
+  font-weight: 400;
+}
+
+
+.moto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo{
+  margin: 1rem;
+  position: relative;
+  width:200px;
+  border-radius: 40px;
+  transform: rotate(-20deg);
+  overflow: hidden;
+}
+.logo-img{
+  width: 100%;
+}
+.logo-text{
+  position: absolute;
+  color: #fa1515;
+  letter-spacing:1.5px;
+  text-shadow: -0.7px -0.2px  #fa1515;
+  bottom: 15px;
+  left: 10px;
+  font-weight: 900;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+.navbar-container hr{
+  width:90%;
+  margin-top: 1rem;
+  border: 0;
+  height: 1px;
+}
+
+.logo hr{
+  position: absolute;
+  bottom: 13px;
+  height: 3px;
+  background-image: linear-gradient(to right, rgba(29, 119, 35, 0),
+   rgba(28, 116, 35, 0.75), rgba(38, 49, 39, 0), rgba(38, 49, 39, 0));
+}
+
+.navbar-container .humburger-menu{
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 150%;
+}
+.navbar-container .humburger-menu:hover{
+opacity: .75;
+}
+hr.header-end{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.side-navbar{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top:0px;
+  right:0;
+  background-color: rgba(14, 13, 13,.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.side-navbar div{
+  background-color: rgba(14, 13, 13,.85);
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem 0 0 2rem;
+  color: white;
+}
+.side-navbar a{
+  text-decoration: none;
+  color: white;
+  font-size: 129%;
+  font-weight: 700;
+  color: #999999;
+}
+.side-navbar a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+/* Header Style end*/
+
+
+/* Forms Style*/
+.login,.register,.create-reminder{
+  margin-bottom: 1rem;
+}
+.update-reminder,
+.delete-reminder
+{
+  position: fixed;
+  background-color: rgba(14, 10, 10, 0.945);
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+}
+.update-reminder .update-reminder--date{
+  position: absolute;
+  opacity: 0;
+  transform: translate(-105%);
+}
+.update-reminder .update-reminder-form,
+.delete-reminder .delete-reminder-form
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to top left, rgba(49, 119, 92, 0.651), rgba(123, 201, 56, 0.63));
+  padding:1rem ;
+}
+.delete-reminder .delete-reminder-form{
+  background-image: linear-gradient(to top left, #fc4f4ff8, #F76E11);}
+.delete-reminder .delete-reminder-form div{
+  display: flex;
+  flex-direction: row;
+  align-items: space-around;
+}
+.update-reminder .input-group,
+.delete-reminder .register__btn{
+  margin: 1rem 1rem;
+}
+.update-reminder p,
+.delete-reminder p{
+  font-size: 150%;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+.login-form,
+.register-form,
+.create-reminder-form{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  padding: 2rem;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;/* 
+  column-gap: 15px; */
+}
+.alertsbox{
+  width: 100%;
+  font-size: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.alertsbox .ok-alert{
+  color: green;
+}
+.alertsbox .not-ok-alert{
+  color: rgb(128, 30, 0);
+}
+.login-form{
+  background-image: linear-gradient(to top left, rgba(25, 105, 211, 0.5), rgba(255, 203, 3,0.5));
+}
+.register-form{
+  background-image: linear-gradient(to top left, rgba(177, 107, 224,0.6), #9474bd);
+}
+.create-reminder-form{
+  background-image: linear-gradient(to top left, rgba(57, 179, 133,0.5), rgba(155, 225, 93,0.5));
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.create-reminder-form .input-group{
+  display: flex;
+  flex-direction: column;
+}
+
+form .welcome{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.login__input {
+  border: none;
+  padding: 0.3rem 1rem;
+  font-family: inherit;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+  color: inherit;
+  border: 1px solid rgb(43, 39, 39);
+  transition: all 0.3s;
+}
+.create-reminder select{
+  -webkit-appearance:none;
+  background-color: white;
+  width: 12rem;
+}
+
+.login__input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.login__input::placeholder {
+  color: rgb(190, 187, 187);
+}
+
+.login__btn {
+  border: none;
+  background: none;
+  font-size: 1rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.login__btn:hover,
+.login__btn:focus,
+.btn--sort:hover,
+.btn--sort:focus {
+  outline: none;
+  color: #777;
+}
+.create-account{
+  font-size: small;
+  margin-top: 0.8rem;
+}
+
+.register__btn {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#f3f3f3, #f3f3f3);
+  border-radius: 10rem;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  height: 30px;
+  justify-content: center;
+  line-height: 1;
+  letter-spacing: 1PX;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.register__btn:hover {
+  box-shadow: rgba(255, 255, 255, 0.2) 0 2px 8px;
+  opacity: .85;
+}
+.btn:hover{
+  opacity: .85;
+}
+.register__btn:active {
+  outline: 0;
+}
+
+.register__btn:focus {
+  box-shadow: rgba(121, 120, 120, 0.5) 0 0 0 3px;
+}
+.create-reminder-btn{ 
+  background-image: linear-gradient(#0c0e0b, #335f3e);
+  color: white;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+.create-reminder .create-reminder--date{
+  opacity: 0;
+  position: absolute;
+}
+
+.reminders-list #editBtn,.reminders-list #DeleteBtn{
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+    text-transform: uppercase;
+    font-size: 0.5rem;
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    min-width: 4rem;
+}
+.reminders-list #DeleteBtn{
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+.reminders-list {
+  margin:auto;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 1rem;
+
+}
+.reminders-list h1{
+  margin:0px auto 10px ;
+}
+.reminders-list tr{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0rem;
+  border-bottom: 1px solid #eee;
+}
+.reminders-list td,.reminders-list th{
+  width: 25%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.fullwidth{
+  width: 100%;
+  text-align: center;
+}
+.reminders-list-small-screen{
+  background-color:#f3f3f3  ;
+}
+.reminders-list-small-screen .reminder-cell{
+  background-color: #fff;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+.reminders-list-small-screen .table-row{
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 10%;
+  border-bottom: 1px solid #eee;
+}
+.reminders-list-small-screen p{
+  width: 100%;
+  
+  text-align: center;
+}
+.reminders-list-small-screen .fa-arrow-down{
+  opacity: 0.5;
+}
+
+.reminders-list-small-screen .table-body{
+  height: 0px;
+  overflow: hidden;
+}
+.guest-login{
+  margin:1rem auto;
+  width: max(300px,30%);
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+  border-radius: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  opacity: 0.7;
+}
+@media screen and (min-width: 600px) {
+  html {
+    background-color: #f3f3f3;
+    padding:0px 10%  ;
+  }
+  body{
+  border-width: 0;
+  box-shadow:inset 0 10px 20px rgba(0, 0, 0, .1),inset 0 3px 6px rgba(0, 0, 0, .1);
+  padding-top: 6rem;
+  }
+  .navbar-container{
+    position: fixed;
+    width:80%;
+    top:0;
+    background-color:#f3f3f3 ;
+    box-shadow:inset 5px 10px 20px rgba(0, 0, 0, .1);
+    
+  }
+  .navbar-container .humburger-menu{
+    right: 5%;
+  }
+  .side-navbar{
+    right:10%;
+    width:80%;
+  }
+  .side-navbar > div{
+    width:40%;
+  }
+  .moto{
+    position: relative;
+    margin-top: .5rem;
+
+  }
+  .logo{
+    align-self: center;
+    position: absolute;
+    margin: 0;
+    top:-2px;
+    left: 5%;
+    width: 120px;
+  }
+  .logo hr{
+    bottom: 9px;
+  }
+  .logo-text{
+    left:7px;
+    bottom: 11px;
+    font-size: 0.45rem;
+  }
+  .login,.register,.create-reminder{
+    font-size: 150%;
+    margin-bottom: 2rem;
+  } 
+}
+
+
+
+@media screen and (max-width: 499px) {
+  .reminders-list-big-screen{
+    height: 0px;
+    overflow: hidden;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 500px) {
+  .reminders-list-small-screen{
+    height: 0px;
+    overflow: hidden;
+    margin: 0;
+  }
+}
